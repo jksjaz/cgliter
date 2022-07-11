@@ -18,13 +18,13 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
-    },
+      nodeIntegration: true
+    }
   })
 
   // and load the index.html of the app.
   // win.loadFile("index.html");
-  win.loadURL(isDev ? `http://localhost:${PORT}` : `file://${path.join(__dirname, "../build/index.html")}`)
+  win.loadURL(isDev ? "http://localhost:3999" : `file://${path.join(__dirname, "../build/index.html")}`)
   // Open the DevTools.
   if (isDev) {
     win.webContents.openDevTools({ mode: "detach" })
