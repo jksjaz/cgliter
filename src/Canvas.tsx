@@ -16,13 +16,15 @@ export const Canvas = () => {
         preserveObjectStacking: true,
         selection: true,
         defaultCursor: "default",
-        width: workarea?.workareaWidth || 0,
-        height: workarea?.workareaHeight || 0,
+        width: (workarea?.workareaWidth ?? 1) * (workarea?.scaleX ?? 1) || 0,
+        height: (workarea?.workareaHeight ?? 1) * (workarea?.scaleY ?? 1) || 0,
       }
     )
     const canvas = new fabric.Canvas(canvasEl.current, mergedCanvasOption)
 
-    const objects = sample.objects.filter((obj) => obj.id !== "workarea")
+    const objects = sample.objects.filter((obj) =>
+      obj.id !== "workarea" ? { ...obj, width: obj.width * obj.scaleX, height: obj.height * obj.scaleY } : false
+    )
 
     const mergeToJson = JSON.parse(JSON.stringify(sample))
     mergeToJson.objects = objects
