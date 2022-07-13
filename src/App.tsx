@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "./logo.svg"
 import "./App.css"
-import { Canvas } from "./Canvas"
+import { AppCanvas } from "./Canvas"
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </a>
       </header> */}
 
-      <Canvas />
+      <AppCanvas />
     </div>
   )
 }
