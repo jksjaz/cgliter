@@ -91,7 +91,7 @@
         "dashboard": {}
       },
       "tooltip": {
-        "enabled": true,
+        "enabled": false,
         "type": "resource",
         "template": "<div>{{message.name}}</div>"
       },
@@ -108,7 +108,7 @@
         "script": "return message.value > 0;",
         "effect": "style"
       },
-      "editable": true
+      "editable": false
     },
     {
       "type": "rect",
@@ -170,7 +170,7 @@
         "script": "return message.value > 0;",
         "effect": "style"
       },
-      "editable": true
+      "editable": false
     }
   ],
   "animations": [],

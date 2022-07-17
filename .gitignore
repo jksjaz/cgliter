@@ -22,16 +22,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
-# react-design-editor
-# Dependency directories
-react-design-editor/node_modules
-react-design-editor/public/js
-react-design-editor/public/index.html
-react-design-editor/public/fonts
-react-design-editor/dist/
-react-design-editor/lib/
-react-design-editor/.vscode/
-react-design-editor/docs/
-react-design-editor/.DS_Store
